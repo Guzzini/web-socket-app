@@ -1,0 +1,190 @@
+body {
+    margin: 2em;
+}
+
+/* background color to the top navigation */
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+}
+
+/* links inside the navigation */
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Change the color on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Active class to highlight the current page */
+.active {
+    background-color: #d42c1b;
+    color: white;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+    display: none;
+}
+
+ul {
+    list-style-type:none;
+    margin:0;
+    padding:0;
+    position: absolute;
+}
+
+li {
+    display:inline-block;
+    float: left;
+    margin-right: 1px;
+    text-align: center;
+}
+/*Style for menu links*/
+li a {
+    display:block;
+    min-width:140px;
+    height: 50px;
+    text-align: left;
+    line-height: 50px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #fff;
+    background: #2f3036;
+    text-decoration: none;
+    padding: 0 20px;
+}
+
+/*Hover state for top level links*/
+li:hover a {
+    background: #d42c1b;
+}
+/*Style for dropdown links*/
+li:hover ul a {
+    background: #f3f3f3;
+    color: #2f3036;
+    height: 40px;
+    line-height: 40px;
+}
+
+/*Hover state for dropdown links*/
+li:hover ul a:hover {
+    background: #d42c1b;
+    color: #fff;
+}
+
+/*Hide dropdown links until they are needed*/
+li ul {
+    display: none;
+}
+
+/*Make dropdown links vertical*/
+li ul li {
+    display: block;
+    float: none;
+}
+
+/*Prevent text wrapping*/
+li ul li a {
+    width: auto;
+    min-width: 100px;
+    padding: 0 20px;
+}
+
+ul li a:hover + .hidden, .hidden:hover {
+    display: block;
+}
+/*Style 'show menu' label button and hide it by default*/
+.show-nav {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-decoration: none;
+    color: #fff;
+    background: #d42c1b;
+    text-align: center;
+    padding: 10px 0;
+    display: none;
+}
+
+/*Hide checkbox*/
+input[type=checkbox]{
+    display: none;
+}
+
+/*Show menu when invisible checkbox is checked*/
+input[type=checkbox]:checked ~ #cat_nav{
+    display: block;
+}
+
+/*Responsive Styles*/
+@media screen and (max-width : 760px){
+
+    ul {
+        position: static;
+        display: none;
+    }
+    li {
+        margin-bottom: 1px;
+    }
+    ul li, li a {
+        width: 100%;
+    }
+    .show-nav {
+        display:block;
+    }
+}
+
+.floatleft {
+    float:left;
+}
+
+.floatright {
+    position: absolute;
+    left: 210px;
+    right: auto;
+    margin-top: -5em;
+}
+
+#cat_nav li:hover ul{
+    left:0;
+    right:auto;
+    margin-left:-8px;
+}
+
+#socket_driver{
+    display: none;
+}
+#error_info{
+    display: none;
+}
+.error{
+    text-align: left;
+    font-size: 15px;;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #d40719;
+    text-decoration: none;
+    width: 25%
+}
+
+.lbltitle{
+    text-align: left;font-size: 17px;
+}
+
+.servermessage{
+    text-align: left;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #008000;
+    font-size: 15px;
+}
+
+.btn{border:none;border-radius: 0;padding: 1em 4em;background: rgba(0,0,0,0.5);text-transform: uppercase;}
+.btn-primary{color: #d42c1b;background: #020a07;width: 25%;outline: none;cursor: pointer;}
+.btn-primary:hover,.btn-primary:active,.btn-primary:focus{background: #d42c1b;color:#fff; box-shadow: none;}
+input {width: 25%;padding:1em;border:1px solid #ccc;margin-bottom: 1em;border-radius: 0;outline: none;}
